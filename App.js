@@ -1,32 +1,66 @@
-import React from 'react';
-import { ImageBackground, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+// DetailsScreen.js
+import React from "react";
+import { View, Text, TextInput, Button,SafeAreaView } from "react-native";
 
-const image = { uri: "https://www.canva.com/p/templates/EAFMNm9ybqQ-gold-luxury-initial-circle-logo/"}
-
-const App = () => (
-  <SafeAreaView style={styles.container}>
-   
-      <View style={styles.text}>Elements</View>
-      <Text style={styles.text}>in Front of</Text>
-      <Text style={styles.text}>Background</Text>
-   
-  </SafeAreaView>
-);
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    top:40
-  },
- 
-  text: {
-    color: 'green',
-    fontSize: 42,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    backgroundColor: 'yellow',
-    borderRadius:10,
-  },
-});
-
-export default App;
+export default function App() {
+  return (
+    <SafeAreaView style={{flex:1}}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#4B4623 ",
+      }}
+    >
+      <Text style={{ fontSize: 30, color: "green" }}>Login Page</Text>
+      <View
+        style={{
+          display: "flex",
+          alignItems: "center",
+          width: 400,
+          height: 200,
+          backgroundColor: "#6B756A",
+          padding: 10,
+          borderWidth: 1,
+          borderColor: "#525952",
+          borderRadius: 20,
+        }}
+      >
+        <TextInput
+          style={{
+            height: 44,
+            width: 300,
+            borderColor: "black",
+            backgroundColor: "white",
+            borderWidth: 1,
+            marginBottom: 10,
+            paddingHorizontal: 10,
+            borderRadius: 10,
+          }}
+          placeholder="Enter Your Name"
+        />
+        <TextInput
+          style={{
+            height: 44,
+            width: 300,
+            borderColor: "black",
+            backgroundColor: "white",
+            borderWidth: 1,
+            marginBottom: 10,
+            paddingHorizontal: 10,
+            borderRadius: 10,
+          }}
+          placeholder="Enter Your Email"
+        />
+        <Button
+          title="Login"
+          color="#23E31A"
+          accessibilityLabel="Learn more about this purple button"
+          style={{ borderRadius: 10, width: 200, height: 60 }}
+        />
+      </View>
+    </View>
+    </SafeAreaView>
+  );
+}
